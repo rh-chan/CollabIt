@@ -1,1 +1,3 @@
-# project-team7
+# CollabIt
+
+App for collaborating with others on projects.
