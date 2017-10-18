@@ -1,0 +1,28 @@
+extends ../layout
+
+block content 
+  .container
+      #signupbox.mainbox
+          .panel.panel-info
+            .panel-heading
+              .panel-title Add Project
+              div(style='float:right; font-size: 85%; position: relative; top:-10px')
+            .panel-body
+              form#formAddProject.form-horizontal(name="addproject", method="post", action="/projects", enctype="multipart/form-data", role='form')
+                .form-group.user-only
+                  label.col-md-3.control-label(for='name') Name
+                  .col-md-9
+                    input.form-control#inputName(type='text', name='name', placeholder='Awesome Project 2000')
+                .form-group
+                  label.col-md-3.control-label(for='password') Description
+                  .col-md-9
+                    textarea.form-control#inputDescription(cols="40", rows="2", placeholder="Describe the project", name="description")
+                .form-group
+                  label.col-md-3.control-label(for='interests') Tags
+                  .col-md-9
+                    input.form-control#inputTags(type='text', name='tags', placeholder='Javascript, games, ubuntu...')
+                .form-group
+                  .col-md-offset-3.col-md-9
+                    button#btn-createProject.btn.btn-info(type='submit')
+                      i.glyphicon.glyphicon-user
+                      | &nbsp; Create Project

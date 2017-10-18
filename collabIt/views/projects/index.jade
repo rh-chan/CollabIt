@@ -1,0 +1,23 @@
+extends ../layout
+
+block content
+  .container
+    h1.
+      Projects
+    table.table.project-list.table-striped.table-bordered.table-hover
+      thead
+        tr
+          th.
+            Name
+          th.
+            Description
+          th.
+            Tags
+      - each project, i in projects
+        tr
+          td
+            a(href='/projects/#{project._id}')= project.name
+          td
+            a(href='/projects/#{project._id}')= project.description
+          td
+            a(href='/projects/#{project._id}')= project.tags
